@@ -2,6 +2,7 @@
 
 namespace Domain.Common;
 
+// Generic Repository Interface
 public interface IGenericRepository<TEntity> where TEntity : class
 {
     Task<IList<TEntity>> GetAll();
