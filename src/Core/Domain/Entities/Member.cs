@@ -5,20 +5,20 @@ using Domain.ValueObjects;
 
 namespace Domain.Entities;
 
-public class Member : BaseEntity<int>
+public class Member : BaseEntity<Guid>
 {
-    public int MemberId { get; private set; }
-    public string FirstName { get; private set; }
-    public string LastName { get; private set; }
-    public DateTime DateOfBirth { get; private set; }
-    public Address Address { get; private set; } // Use Value Object
-    public string Phone { get; private set; }
-    public string Email { get; private set; }
+    public Guid MemberId { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public DateTime DateOfBirth { get; set; }
+    public Address Address { get; set; } // Use Value Object
+    public string Phone { get; set; }
+    public string Email { get; set; }
 
     // Navigation properties
-    public ICollection<Loan> Loans { get; private set; }
+    public ICollection<Loan> Loans { get; set; }
 
-    public Member(int memberId, string firstName, string lastName, DateTime dateOfBirth, Address address, string phone, string email) : base()
+    public Member(Guid memberId, string firstName, string lastName, DateTime dateOfBirth, Address address, string phone, string email) : base()
     {
         // Validation checks
         if (string.IsNullOrWhiteSpace(firstName))

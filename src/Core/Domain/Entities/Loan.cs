@@ -4,20 +4,20 @@ using Domain.Common;
 
 namespace Domain.Entities;
 
-public class Loan : BaseEntity<int>
+public class Loan : BaseEntity<Guid>
 {
-    public int LoanId { get; private set; }
-    public int BookId { get; private set; }
-    public int MemberId { get; private set; }
-    public DateTime LoanDate { get; private set; }
-    public DateTime? ReturnDate { get; private set; }
-    public DateTime DueDate { get; private set; }
+    public Guid LoanId { get; set; }
+    public Guid BookId { get; set; }
+    public Guid MemberId { get; set; }
+    public DateTime LoanDate { get; set; }
+    public DateTime? ReturnDate { get; set; }
+    public DateTime DueDate { get; set; }
 
     // Navigation properties
-    public Book Book { get; private set; }
-    public Member Member { get; private set; }
+    public Book Book { get; set; }
+    public Member Member { get; set; }
 
-    public Loan(int loanId, int bookId, int memberId, DateTime loanDate, DateTime dueDate, DateTime? returnDate = null) : base()
+    public Loan(Guid loanId, Guid bookId, Guid memberId, DateTime loanDate, DateTime dueDate, DateTime? returnDate = null) : base()
     {
         // Validation checks
         if (loanDate == default)

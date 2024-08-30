@@ -4,10 +4,10 @@ using Domain.Common;
 
 namespace Domain.Entities;
 
-public class BookAuthor(int bookId, Book book, int authorId, Author author) : BaseEntity<int>()
+public class BookAuthor(Guid bookId, Book book, Guid authorId, Author author) : BaseEntity<Guid>()
 {
-    public int BookId { get; private set; } = bookId;
-    public Book Book { get; private set; } = book ?? throw new ArgumentNullException(nameof(book));
-    public int AuthorId { get; private set; } = authorId;
-    public Author Author { get; private set; } = author ?? throw new ArgumentNullException(nameof(author));
+    public Guid BookId { get; set; } = bookId;
+    public Book Book { get; set; } = book ?? throw new ArgumentNullException(nameof(book));
+    public Guid AuthorId { get; set; } = authorId;
+    public Author Author { get; set; } = author ?? throw new ArgumentNullException(nameof(author));
 }

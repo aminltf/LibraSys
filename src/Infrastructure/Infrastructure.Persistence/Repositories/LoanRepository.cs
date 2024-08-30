@@ -17,7 +17,7 @@ public class LoanRepository : GenericRepository<Loan>, ILoanRepository
     public LoanRepository(LibraSysContext context, IMemoryCache cache) : base(context) => _cache = cache;
 
     // Fetch a loan by ID with its related details (Eager Loading)
-    public async Task<Loan> GetByIdWithDetails(int id)
+    public async Task<Loan> GetByIdWithDetails(Guid id)
     {
         return await _context.Loans
             .Include(l => l.Book) // Include the related book

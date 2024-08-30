@@ -9,10 +9,21 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="FluentValidation" Version="11.9.2" />
+    <PackageReference Include="MediatR" Version="12.4.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Usecases\Author\Queries\" />
+    <Folder Include="Usecases\Book\Commands\" />
+    <Folder Include="Usecases\Book\Queries\" />
+    <Folder Include="Usecases\Loan\Commands\" />
+    <Folder Include="Usecases\Loan\Queries\" />
+    <Folder Include="Usecases\Member\Commands\" />
+    <Folder Include="Usecases\Member\Queries\" />
   </ItemGroup>
 
 </Project>

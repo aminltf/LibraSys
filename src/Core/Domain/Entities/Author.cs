@@ -4,18 +4,20 @@ using Domain.Common;
 
 namespace Domain.Entities;
 
-public class Author : BaseEntity<int>
+public class Author : BaseEntity<Guid>
 {
-    public int AuthorId { get; private set; }
-    public string FirstName { get; private set; }
-    public string LastName { get; private set; }
-    public DateTime DateOfBirth { get; private set; }
-    public string Biography { get; private set; }
+    public Guid AuthorId { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public DateTime DateOfBirth { get; set; }
+    public string Biography { get; set; }
 
     // Navigation properties
-    public ICollection<BookAuthor> BookAuthors { get; private set; }
+    public ICollection<BookAuthor> BookAuthors { get; set; }
 
-    public Author(int authorId, string firstName, string lastName, DateTime dateOfBirth, string biography = "") : base()
+    public Author() { }
+
+    public Author(Guid authorId, string firstName, string lastName, DateTime dateOfBirth, string biography = "") : base()
     {
         // Validation checks
         if (string.IsNullOrWhiteSpace(firstName))

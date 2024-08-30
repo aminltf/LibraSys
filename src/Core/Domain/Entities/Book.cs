@@ -5,21 +5,21 @@ using Domain.Enums;
 
 namespace Domain.Entities;
 
-public class Book : BaseEntity<int>
+public class Book : BaseEntity<Guid>
 {
-    public int BookId { get; private set; }
-    public string Title { get; private set; }
-    public int PublicationYear { get; private set; }
-    public Genre Genre { get; private set; }
-    public int AuthorId { get; private set; }
-    public string Publisher { get; private set; }
-    public int CopiesAvailable { get; private set; }
+    public Guid BookId { get; set; }
+    public string Title { get; set; }
+    public int PublicationYear { get; set; }
+    public Genre Genre { get; set; }
+    public Guid AuthorId { get; set; }
+    public string Publisher { get; set; }
+    public int CopiesAvailable { get; set; }
 
     // Navigation properties
-    public ICollection<BookAuthor> BookAuthors { get; private set; }
-    public ICollection<Loan> Loans { get; private set; }
+    public ICollection<BookAuthor> BookAuthors { get; set; }
+    public ICollection<Loan> Loans { get; set; }
 
-    public Book(int bookId, string title, int publicationYear, Genre genre, int authorId, string publisher, int copiesAvailable) : base()
+    public Book(Guid bookId, string title, int publicationYear, Genre genre, Guid authorId, string publisher, int copiesAvailable) : base()
     {
         // Validation checks
         if (string.IsNullOrWhiteSpace(title))

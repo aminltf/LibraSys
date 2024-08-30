@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.10.35201.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B3CEACC1-767E-40D5-960D-15DC3FE45757}"
+	ProjectSection(SolutionItems) = preProject
+		LibraSys.txt = LibraSys.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{39E71E07-8499-4C5D-B46B-95219BF542DD}"
 EndProject
@@ -11,17 +14,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{335297D6-4526-4A29-A5A6-C5D676EB86DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "src\Core\Domain\Domain.csproj", "{5F9985FA-6826-49A1-815D-70290DF5BD6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "src\Core\Domain\Domain.csproj", "{5F9985FA-6826-49A1-815D-70290DF5BD6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "src\Core\Application\Application.csproj", "{BC90FCED-D781-4AFA-925B-7010DE858901}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "src\Core\Application\Application.csproj", "{BC90FCED-D781-4AFA-925B-7010DE858901}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Identity", "src\Infrastructure\Infrastructure.Identity\Infrastructure.Identity.csproj", "{BE4E3295-9169-406C-9C90-AB6859BD2902}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Identity", "src\Infrastructure\Infrastructure.Identity\Infrastructure.Identity.csproj", "{BE4E3295-9169-406C-9C90-AB6859BD2902}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Persistence", "src\Infrastructure\Infrastructure.Persistence\Infrastructure.Persistence.csproj", "{24F32DBE-98B2-4946-BCA8-3C570DF125E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Persistence", "src\Infrastructure\Infrastructure.Persistence\Infrastructure.Persistence.csproj", "{24F32DBE-98B2-4946-BCA8-3C570DF125E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Shared", "src\Infrastructure\Infrastructure.Shared\Infrastructure.Shared.csproj", "{2092126E-CD4B-4966-883F-4BAFBEE6492D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Shared", "src\Infrastructure\Infrastructure.Shared\Infrastructure.Shared.csproj", "{2092126E-CD4B-4966-883F-4BAFBEE6492D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "src\Presentation\WebApp\WebApp.csproj", "{5C5E151D-7AF2-427F-8448-E490728CAA0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "src\Presentation\WebApp\WebApp.csproj", "{5C5E151D-7AF2-427F-8448-E490728CAA0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

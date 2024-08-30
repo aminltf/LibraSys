@@ -20,7 +20,7 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
         await _context.SaveChangesAsync();
     }
 
-    public async Task Delete(int id)
+    public async Task Delete(Guid id)
     {
         var entity = await _context.Set<TEntity>().FindAsync(id);
         if (entity != null)
