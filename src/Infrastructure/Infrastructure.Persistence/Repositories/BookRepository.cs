@@ -17,7 +17,7 @@ public class BookRepository : GenericRepository<Book>, IBookRepository
     public BookRepository(LibraSysContext context, IMemoryCache cache) : base(context) => _cache = cache;
 
     // Fetch a book by ID with its related authors (Eager Loading)
-    public async Task<Book> GetByIdWithAuthors(int id)
+    public async Task<Book> GetByIdWithAuthors(Guid id)
     {
         return await _context.Books
             .Include(b => b.BookAuthors)

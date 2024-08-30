@@ -17,7 +17,7 @@ public class MemberRepository : GenericRepository<Member>, IMemberRepository
     public MemberRepository(LibraSysContext context, IMemoryCache cache) : base(context) => _cache = cache;
 
     // Fetch a member by ID with their related loans (Eager Loading)
-    public async Task<Member> GetByIdWithLoans(int id)
+    public async Task<Member> GetByIdWithLoans(Guid id)
     {
         return await _context.Members
             .Include(m => m.Loans) // Include related loans
